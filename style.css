@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+
+.explore-btn {
+    position: relative;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #03e9f4; 
+    background: transparent;
+    border: 2px solid #03e9f4; 
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out; 
+    z-index: 1;
+}
+
+
+.explore-btn:hover {
+    color: #111; 
+    background: #03e9f4; 
+    box-shadow: 0 0 10px #03e9f4, 0 0 40px #03e9f4, 0 0 80px #03e9f4;
+    transform: scale(1.05); 
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: rippleAnim 0.6s linear infinite;
+}
+
+@keyframes rippleAnim {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
